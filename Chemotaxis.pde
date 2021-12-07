@@ -19,25 +19,25 @@ void draw()
 }
 class Bacteria    
 {     
-  int x, y, f;
+  int x, y, colour;
   Bacteria() {
     x = 150;
     y = 150;
-    f = (int)(Math.random()*254);
+    colour = color((int)(Math.random()*256),(int)(Math.random()*256),(int)(Math.random()*256));;
   }    
   void move() {
-    int peebus = (int)(Math.random()*4)+1;
-    if(peebus == 1)
+    int moveIt = (int)(Math.random()*4)+1;
+    if(moveIt == 1)
       y++;
-    else if(peebus == 2)
+    else if(moveIt == 2)
       x++;
-    else if(peebus == 3)
+    else if(moveIt == 3)
       y--;
-    else if(peebus == 4)
+    else if(moveIt == 4)
       x--;
 }
   void show() {
-    fill(f);
+    fill(colour);
     ellipse(x, y, 10, 10);
   }
 }
